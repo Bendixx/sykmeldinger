@@ -17,6 +17,7 @@ const sentryWebpackPluginOptions = {
  */
 const nextConfig = withBundleAnalyzer({
     reactStrictMode: true,
+    output: 'standalone',
     basePath: process.env.NEXT_PUBLIC_BASE_PATH,
     pageExtensions: ['page.tsx', 'page.ts', 'api.ts'],
     assetPrefix: process.env.ASSET_PREFIX,

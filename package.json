@@ -33,7 +33,6 @@
         "graphql-scalars": "^1.17.0",
         "micro": "^9.3.4",
         "next": "12.2.0",
-        "next-logger": "^3.0.1",
         "pino": "^8.1.0",
         "react": "^17.0.2",
         "react-day-picker": "^7.4.10",
