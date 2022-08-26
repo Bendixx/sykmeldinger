@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { BodyShort, Heading, LinkPanel } from '@navikt/ds-react';
-import cn from 'classnames';
+import cn from 'clsx';
 
 import { Sykmelding } from '../../../fetching/graphql.generated';
 import { getReadableSykmeldingLength, getSykmeldingTitle } from '../../../utils/sykmeldingUtils';

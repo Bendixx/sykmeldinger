@@ -1,4 +1,4 @@
-import cn from 'classnames';
+import cn from 'clsx';
 import { BodyShort, Heading } from '@navikt/ds-react';
 
 import SladdSvg from '../../Svg/SladdSvg';
@@ -14,14 +14,14 @@ interface SykmeldingEntryProps {
     sladd?: boolean;
 }
 
-const SykmeldingEntry: React.FC<SykmeldingEntryProps> = ({
+function SykmeldingEntry({
     title,
     headingLevel = '3',
     mainText,
     subText,
     small,
     sladd = false,
-}) => {
+}: SykmeldingEntryProps): JSX.Element {
     if (small) {
         return (
             <div className={styles.sykmeldingEntry}>
@@ -42,6 +42,6 @@ const SykmeldingEntry: React.FC<SykmeldingEntryProps> = ({
             {!!subText && <BodyShort size="small">{subText}</BodyShort>}
         </div>
     );
-};
+}
 
 export default SykmeldingEntry;

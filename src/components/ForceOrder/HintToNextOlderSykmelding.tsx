@@ -1,7 +1,7 @@
 import { BodyLong, Button, GuidePanel } from '@navikt/ds-react';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
-import cn from 'classnames';
+import cn from 'clsx';
 
 import { toEarliestSykmelding, useUnsentSykmeldinger } from '../../hooks/useFindOlderSykmeldingId';
 import { pluralize } from '../../utils/stringUtils';

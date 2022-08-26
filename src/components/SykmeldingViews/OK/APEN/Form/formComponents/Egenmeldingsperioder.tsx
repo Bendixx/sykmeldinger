@@ -28,7 +28,7 @@ const Egenmeldingsperioder: React.FC<EgenmeldingsperioderProps> = ({ oppfolgings
     });
 
     useEffect(() => {
-        append({ fom: undefined, tom: undefined });
+        append({ fom: null, tom: null });
     }, [append]);
 
     useEffect(() => {
@@ -153,7 +153,7 @@ const Egenmeldingsperioder: React.FC<EgenmeldingsperioderProps> = ({ oppfolgings
                                         limitations={{
                                             maxDate: maxDate.format('YYYY-MM-DD'),
                                         }}
-                                        inputProps={{ name: field.name, placeholder: 'dd.mm.åååå' }}
+                                        inputProps={{ placeholder: 'dd.mm.åååå' }}
                                         dayPickerProps={{ initialMonth: maxDate.toDate() }}
                                     />
                                     {fieldState.error?.message && (
@@ -165,8 +165,13 @@ const Egenmeldingsperioder: React.FC<EgenmeldingsperioderProps> = ({ oppfolgings
                             )}
                         />
                         {index > 0 && (
-                            <Button variant="tertiary" size="small" type="button" onClick={() => remove(index)}>
-                                <Close />
+                            <Button
+                                variant="tertiary"
+                                size="small"
+                                type="button"
+                                onClick={() => remove(index)}
+                                icon={<Close />}
+                            >
                                 Fjern periode
                             </Button>
                         )}
@@ -178,9 +183,9 @@ const Egenmeldingsperioder: React.FC<EgenmeldingsperioderProps> = ({ oppfolgings
                 variant="tertiary"
                 size="small"
                 type="button"
-                onClick={() => append({ fom: undefined, tom: undefined })}
+                onClick={() => append({ fom: null, tom: null })}
+                icon={<Add />}
             >
-                <Add />
                 Legg til ekstra periode
             </Button>
         </QuestionWrapper>

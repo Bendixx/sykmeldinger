@@ -1,4 +1,4 @@
-import cn from 'classnames';
+import cn from 'clsx';
 import { PropsWithChildren } from 'react';
 
 import styles from './QuestionWrapper.module.css';

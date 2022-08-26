@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Alert, Button, Loader } from '@navikt/ds-react';
+import { Alert, Button } from '@navikt/ds-react';
 import { useForm, FormProvider } from 'react-hook-form';
 
 import useExtraFormData from '../../../../../hooks/useExtraFormData';
@@ -170,8 +170,9 @@ function Form({ sykmelding }: FormProps): JSX.Element {
                                 disabled={fetchingSend}
                                 variant="primary"
                                 type="submit"
+                                loading={fetchingSend}
                             >
-                                {erArbeidstaker ? 'Send' : 'Bekreft'} sykmelding {fetchingSend && <Loader />}
+                                {erArbeidstaker ? 'Send' : 'Bekreft'} sykmelding
                             </Button>
                         </div>
                     </Spacing>
