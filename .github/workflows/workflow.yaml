@@ -108,7 +108,7 @@ jobs:
           VAR: image=${{ env.DOCKER_IMAGE }},version=${{ github.sha }}
 
   deploy-to-labs-gcp:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/heads/labs')
     name: Deploy to labs-gcp (Demo)
     needs: [build-and-publish, snyk-test]
     runs-on: ubuntu-latest
